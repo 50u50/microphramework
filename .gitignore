@@ -79,3 +79,6 @@ composer.phar
 
 # netbeans
 /nbproject/
+
+# settings.php
+src/settings.php

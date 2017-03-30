@@ -13,11 +13,12 @@ use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 
 $request = Request::createFromGlobals();
 $routes  = include __DIR__ . '/../src/routes.php';
+$sc      = include __DIR__ . '/../src/container.php';
 
 $context   = new RequestContext();
 $matcher   = new UrlMatcher($routes, $context);
 $resolver  = new ControllerResolver();
 $framework = new Phramework\Framework($matcher, $resolver);
-$response  = $framework->handle($request);
+$response  = $sc->get('framework')->handle($request);
 
 $response->send();

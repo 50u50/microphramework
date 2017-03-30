@@ -4,13 +4,13 @@ use Symfony\Component\Routing\{
     RouteCollection,
     Route
 };
-use App\Controller\IndexController;
+use Album\Controller\PhotoController;
 
 $routes = new RouteCollection();
 
 $routes->add('index', new Route('/_{name}', [
     'name'        => 'World',
-    '_controller' => IndexController::class . '::indexAction',
+    '_controller' => PhotoController::class . '::indexAction',
 ]));
 
 return $routes;

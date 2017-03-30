@@ -1,0 +1,18 @@
+<?php
+
+return [
+    'doctrine' => [
+        'meta'       => [
+            'entity_path' => [
+                'src/Album/Entity',
+            ],
+        ],
+        'connection' => [
+            'driver'   => 'pdo_mysql',
+            'host'     => 'localhost',
+            'dbname'   => 'dbname',
+            'user'     => 'root',
+            'password' => 'pass',
+        ],
+    ],
+];
